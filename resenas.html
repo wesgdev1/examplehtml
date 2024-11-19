@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resenas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div></div>
+
+    <header>
+      <div class="container">
+        <div class="personalData">
+          <img
+            src="./profileimage.png"
+            alt="Imagen de Perfil"
+            class="profile-pic"
+          />
+          <div class="info">
+            <h1>Welinton Suarez</h1>
+            <p>Ingeniero de Sistemas</p>
+          </div>
+        </div>
+
+        <div>
+          <nav>
+            <ul>
+              <li><a class="main" href="index.html">Inicio</a></li>
+
+              <li><a class="main" href="#experience">Experiencia</a></li>
+              <li><a class="main" href="#contact">Contacto</a></li>
+              <li>
+                <div class="main" onclick="mostrarMenu()">
+                  Submenu
+                  <ul class="listaVerticalOculta" id="menu">
+                    <li><a class="main" href="resenas.html">Mis reseñas</a></li>
+                    <li><a a class="main" href="blogs.html">Mis blogs</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <br />
+
+        <hr />
+        <!-- navegacion -->
+      </div>
+    </header>
+
+    <section>
+      <h1>Agregar Reseña</h1>
+      <form id="reviewForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" placeholder="Escribe tu nombre" required />
+
+        <label for="comment">Comentario:</label>
+        <textarea
+          id="comment"
+          rows="3"
+          placeholder="Escribe tu comentario"
+          required
+        ></textarea>
+
+        <label for="rating">Calificación:</label>
+        <select id="rating" required>
+          <option value="" disabled selected>
+            Selecciona una calificación
+          </option>
+          <option value="1">1 Estrella</option>
+          <option value="2">2 Estrellas</option>
+          <option value="3">3 Estrellas</option>
+          <option value="4">4 Estrellas</option>
+          <option value="5">5 Estrellas</option>
+        </select>
+
+        <button type="submit">Agregar Reseña</button>
+      </form>
+
+      <h2>Reseñas</h2>
+      <div id="reviewsContainer" class="reviews-container">
+        <!-- Aquí aparecerán las reseñas -->
+      </div>
+    </section>
+
+    <script src="./scriptsresena.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="personalData">
+          <img
+            src="./profileimage.png"
+            alt="Imagen de Perfil"
+            class="profile-pic"
+          />
+          <div class="info">
+            <h1>Welinton Suarez</h1>
+            <p>Ingeniero de Sistemas</p>
+          </div>
+        </div>
+
+        <div>
+          <nav>
+            <ul>
+              <li><a class="main" href="index.html">Inicio</a></li>
+
+              <li><a class="main" href="#experience">Experiencia</a></li>
+              <li><a class="main" href="#contact">Contacto</a></li>
+              <li>
+                <div class="main" onclick="mostrarMenu()">
+                  Submenu
+                  <ul class="listaVerticalOculta" id="menu">
+                    <li><a class="main" href="resenas.html">Mis reseñas</a></li>
+                    <li><a a class="main" href="blogs.html">Mis blogs</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <br />
+
+        <hr />
+        <!-- navegacion -->
+      </div>
+    </header>
+
+    <section>
+      <h2>Mis Blogs</h2>
+      <hr />
+      <form id="blogForm">
+        <label for="imageInput">Subir Imagen:</label>
+        <input type="file" id="imageInput" accept="image/*" required />
+
+        <label for="title">Título:</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="Escribe el título"
+          required
+        />
+
+        <label for="description">Descripción:</label>
+        <textarea
+          id="description"
+          rows="3"
+          placeholder="Escribe una descripción"
+          required
+        ></textarea>
+
+        <button type="submit">Agregar Blog</button>
+      </form>
+
+      <div id="blogsContainer" class="blogs-container"></div>
+    </section>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>

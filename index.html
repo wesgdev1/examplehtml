@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="personalData">
+          <img
+            src="./profileimage.png"
+            alt="Imagen de Perfil"
+            class="profile-pic"
+          />
+          <div class="info">
+            <h1>Welinton Suarez</h1>
+            <p>Ingeniero de Sistemas</p>
+          </div>
+        </div>
+
+        <div>
+          <nav>
+            <ul>
+              <li><a class="main" href="index.html">Inicio</a></li>
+
+              <li><a class="main" href="#experience">Experiencia</a></li>
+              <li><a class="main" href="#contact">Contacto</a></li>
+              <li>
+                <div class="main" onclick="mostrarMenu()">
+                  Submenu
+                  <ul class="listaVerticalOculta" id="menu">
+                    <li><a class="main" href="resenas.html">Mis reseñas</a></li>
+                    <li><a a class="main" href="blogs.html">Mis blogs</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <br />
+
+        <hr />
+        <!-- navegacion -->
+
+        <p class="description">
+          Soy un Ingeniero de Sistemas con experiencia en desarrollo de software
+          y administración de bases de datos. Me apasiona la tecnología y
+          aprender cosas nuevas. Me gusta trabajar en equipo y aportar mis
+          conocimientos para el logro de los objetivos de la empresa.
+        </p>
+      </div>
+    </header>
+
+    <section class="experience">
+      <h2>Experiencia</h2>
+      <div class="group">
+        <div class="experience-item">
+          <h3>Ingeniero Mecatronico</h3>
+          <p>Ceramica Italia</p>
+        </div>
+        <div class="experience-item">
+          <h3>Puesto 2</h3>
+          <p>Descripcion del puesto numero 1</p>
+        </div>
+        <div class="experience-item">
+          <h3>Puesto 3</h3>
+          <p>Descripcion del puesto numero 1</p>
+        </div>
+        <div class="experience-item">
+          <h3>Puesto 4</h3>
+          <p>Descripcion del puesto numero 1</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="contact" id="contact">
+      <h2>Contacto</h2>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Hagamos un boton de whatsapp -->
+    <a
+      class="ao"
+      href="https://www.whatsapp.com"
+      target="_blank"
+      class="whatsapp"
+    >
+      <img class="wh" src="./w.png" alt="whatsapp" />
+    </a>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
